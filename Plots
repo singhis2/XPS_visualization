@@ -1,0 +1,241 @@
+a=dlmread('Au 4f.TXT', '\t', 4,0);
+binding_energy = a(1:end,2:2);
+Au4f_1 = a(1:end,3:3);
+Au4f_2 = a(1:end,4:4);
+Au4f_3 = a(1:end,5:5);
+background = a(1:end,6:6);
+widescan = [149,159,175]./255;
+black = [0,0,0]./255;
+figure(1)
+subplot(3,3,1)
+plot(binding_energy, Au4f_1,'.','Color', 'black');
+hold on 
+plot(binding_energy, Au4f_2, '.','Color', 'black');
+hold on
+plot(binding_energy, Au4f_3, '.','Color', 'black');
+hold on
+plot(binding_energy, background, ':','Color', 'black');
+hold off
+set(gca, 'XDir', 'reverse');
+title('Au 4f');
+xlabel('Binding Energy (eV)');
+ylabel('Intensity (CPS)');
+hf = fill_between(binding_energy,background,Au4f_2);
+hf.FaceColor=black; hf.FaceAlpha = 0.1; hf.EdgeColor=widescan;
+hold on
+hf = fill_between(binding_energy,background,Au4f_3);
+hf.FaceColor=black; hf.FaceAlpha = 0.1; hf.EdgeColor=black;
+hold off
+refresh(1)
+
+
+
+a=dlmread('C1s.TXT', '\t', 4,0);
+to read the file.
+##defining variables (row(from start to end), column (start to end) 
+binding_energy = a(1:end,2:2);
+##defining each one of these individual components
+C1s_1 = a(1:end,3:3);
+C1s_2 = a(1:end,4:4);
+C1s_3 = a(1:end,5:5);
+C1s_4 = a(1:end,6:6);
+C1s_5 = a(1:end,7:7);
+background = a(1:end,8:8);
+envelope = a(1:end,9:9);
+my colours
+widescan = [149,159,175]./255;
+black = [0,0,0]./255;
+plotting graph (figure)
+figure(1)
+function(matrix,matrix, position on matrix)
+subplot(3,3,2)
+plot(x,y)
+plot(binding_energy, C1s_1,'.','Color', 'black');
+hold on 
+plot(binding_energy, C1s_2, '.','Color', 'black');
+hold on
+plot(binding_energy, C1s_3, '.','Color', 'black');
+hold on
+plot(binding_energy, C1s_4, '.','Color', 'black');
+hold on
+plot(binding_energy, C1s_5, '.','Color', 'black');
+hold on
+plot(binding_energy, background, ':','Color', 'black');
+hold on 
+plot(binding_energy, envelope, ':','Color', 'black');
+hold off
+set(gca, 'XDir', 'reverse');
+title('C 1s');
+xlabel('Binding Energy (eV)');
+ylabel('Intensity (CPS)');
+hf = fill_between(binding_energy,background,C1s_2);
+hf.FaceColor=black; hf.FaceAlpha = 0.1; hf.EdgeColor=black;
+hold on
+hf = fill_between(binding_energy,background,C1s_3);
+hf.FaceColor=black; hf.FaceAlpha = 0.1; hf.EdgeColor=black;
+hold on
+hf = fill_between(binding_energy,background,C1s_4);
+hf.FaceColor=black; hf.FaceAlpha = 0.1; hf.EdgeColor=black;
+hold on 
+hf = fill_between(binding_energy,background,C1s_5);
+hf.FaceColor=black; hf.FaceAlpha = 0.1; hf.EdgeColor=black;
+hold off
+refresh(1)
+
+
+
+a=dlmread('N1s.TXT', '\t', 4,0); 
+binding_energy = a(1:end,2:2);
+N1s_1 = a(1:end,3:3);
+N1s_2 = a(1:end,4:4);
+N1s_3 = a(1:end,5:5);
+N1s_4 = a(1:end,6:6);
+N1s_5 = a(1:end,7:7);
+background = a(1:end,8:8);
+widescan = [149,159,175]./255;
+black = [0,0,0]./255;
+figure(1)
+subplot(3,3,4)
+plot(binding_energy, N1s_1,'.','Color', 'black');
+hold on 
+plot(binding_energy, N1s_2, '.','Color', 'black');
+hold on
+plot(binding_energy, N1s_3, '.','Color', 'black');
+hold on 
+plot(binding_energy, N1s_4, '.', 'Color', 'black');
+hold on 
+plot(binding_energy, N1s_5, '.', 'Color', 'black');
+hold on
+plot(binding_energy, background, ':','Color', 'black');
+hold off
+set(gca, 'XDir', 'reverse');
+title('N 1s');
+xlabel('Binding Energy (eV)');
+ylabel('Intensity (CPS)');
+hf = fill_between(binding_energy,background,N1s_2);
+hf.FaceColor=black; hf.FaceAlpha = 0.1; hf.EdgeColor=widescan;
+hold on
+hf = fill_between(binding_energy,background,N1s_3);
+hf.FaceColor=black; hf.FaceAlpha = 0.1; hf.EdgeColor=black;
+hold on
+hf = fill_between(binding_energy,background,N1s_4);
+hf.FaceColor=black; hf.FaceAlpha = 0.1; hf.EdgeColor=black;
+hold on
+hf = fill_between(binding_energy,background,N1s_5);
+hf.FaceColor=black; hf.FaceAlpha = 0.1; hf.EdgeColor=black;
+hold off
+refresh(1)
+
+
+
+a=dlmread('S2p.TXT', '\t', 4,0); 
+binding_energy = a(1:end,2:2);
+S2p_1 = a(1:end,3:3);
+S2p_2 = a(1:end,4:4);
+S2p_3 = a(1:end,5:5);
+S2p_4 = a(1:end,6:6);
+S2p_5 = a(1:end,7:7);
+S2p_6 = a(1:end,8:8);
+S2p_7 = a(1:end,9:9);
+background = a(1:end,10:10);
+widescan = [149,159,175]./255;
+black = [0,0,0]./255;
+figure(1)
+subplot(3,3,6)
+plot(binding_energy, S2p_1,'.','Color', 'black');
+hold on 
+plot(binding_energy, S2p_2, '.','Color', 'black');
+hold on
+plot(binding_energy, S2p_3, '.','Color', 'black');
+hold on 
+plot(binding_energy, S2p_4, '.', 'Color', 'black');
+hold on 
+plot(binding_energy, S2p_5, '.', 'Color', 'black');
+hold on
+plot(binding_energy, S2p_6, '.', 'Color', 'black');
+hold on
+plot(binding_energy, S2p_7, '.', 'Color', 'black');
+hold on
+plot(binding_energy, background, ':','Color', 'black');
+hold off
+set(gca, 'XDir', 'reverse');
+title('S 2p');
+xlabel('Binding Energy (eV)');
+ylabel('Intensity (CPS)');
+hf = fill_between(binding_energy,background,S2p_2);
+hf.FaceColor=black; hf.FaceAlpha = 0.1; hf.EdgeColor=widescan;
+hold on
+hf = fill_between(binding_energy,background,S2p_3);
+hf.FaceColor=black; hf.FaceAlpha = 0.1; hf.EdgeColor=black;
+hold on
+hf = fill_between(binding_energy,background,S2p_4);
+hf.FaceColor=black; hf.FaceAlpha = 0.1; hf.EdgeColor=black;
+hold on
+hf = fill_between(binding_energy,background,S2p_5);
+hf.FaceColor=black; hf.FaceAlpha = 0.1; hf.EdgeColor=black;
+hold on
+hf = fill_between(binding_energy,background,S2p_6);
+hf.FaceColor=black; hf.FaceAlpha = 0.1; hf.EdgeColor=black;
+hold on
+hf = fill_between(binding_energy,background,S2p_7);
+hf.FaceColor=black; hf.FaceAlpha = 0.1; hf.EdgeColor=black;
+hold off
+refresh(1)
+
+
+a=dlmread('O1s.TXT', '\t', 4,0); 
+binding_energy = a(1:end,2:2);
+O1s_1 = a(1:end,3:3);
+O1s_2 = a(1:end,4:4);
+O1s_3 = a(1:end,5:5);
+O1s_4 = a(1:end,6:6);
+background = a(1:end,7:7);
+envelope = a(1:end,8:8);
+widescan = [149,159,175]./255;
+black = [0,0,0]./255;
+figure(1)
+subplot(3,3,5)
+plot(binding_energy, O1s_1,'.','Color', 'black');
+hold on 
+plot(binding_energy, O1s_2, '.','Color', 'black');
+hold on
+plot(binding_energy, O1s_3, '.','Color', 'black');
+hold on 
+plot(binding_energy, O1s_4, '.','Color', 'black');
+hold on 
+plot(binding_energy,background,'.', 'Color', 'black');
+hold on 
+plot(binding_energy, envelope, ':','Color', 'black');
+hold off
+set(gca, 'XDir', 'reverse');
+title('O 1s');
+xlabel('Binding Energy (eV)');
+ylabel('Intensity (CPS)');
+hf = fill_between(binding_energy,background,O1s_2);
+hf.FaceColor=black; hf.FaceAlpha = 0.1; hf.EdgeColor=widescan;
+hold on
+hf = fill_between(binding_energy,background,O1s_3);
+hf.FaceColor=black; hf.FaceAlpha = 0.1; hf.EdgeColor=black;
+hold on 
+hf = fill_between(binding_energy,background,O1s_4);
+hf.FaceColor=black; hf.FaceAlpha = 0.1; hf.EdgeColor=black;
+hold off
+refresh(1)
+
+
+a=dlmread('wide.TXT', '\t', 4,0); 
+binding_energy = a(1:end,2:2);
+background = a(1:end,3:3);
+widescan = [149,159,175]./255;
+black = [0,0,0]./255;
+figure(1)
+subplot(3,3,7)
+plot(binding_energy, background, ':','Color', 'black');
+set(gca, 'XDir', 'reverse');
+title('Widescan');
+xlabel('Binding Energy (eV)');
+ylabel('Intensity (CPS)');
+refresh(1)
+
+print('-dsvg', '-r600','XYZ')
+
